@@ -61,9 +61,9 @@ function App() {
   }
 
 
-  const handleScroll = (e) => {
-    const { scrollTop, clientHeight, scrollHeight } = document.documentElement;
-    if (scrollTop + clientHeight === scrollHeight) {
+   const handleScroll = (e) => {
+
+    if (window.innerHeight + e.target.documentElement.scrollTop + 1 > e.target.documentElement.scrollHeight ) {
       fetchData();
     }
   };
